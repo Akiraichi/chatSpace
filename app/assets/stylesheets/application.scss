@@ -1,9 +1,39 @@
 @import "./reset";
-
- !!! 
- %html {
-    lang: "ja"
+body{
+  background-color: aqua;
+}
+.chatSide{
+  margin: 0px 0px 0px 20px;
+  background-color:#2f3e51;
+  width: 300px;
 }
 
-%head 
-  %meta{charset}
+.chatSide__user{
+  background-color: #253141;
+}
+
+.chatSide__user--name{
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.chatSide__groups{
+  
+}
+
+.chatSide__group{
+  margin: 0px 0px 40px 0px;
+}
+
+.chatSide__group--name{
+  color: #ffffff;
+  font-size: 15px;
+  margin: 20px 0px 0px 0px;
+}
+
+.chatSide__group--comment{
+  margin: 5px 0 0 0;
+  font-size: 11px;
+  color: #ffffff;
+}
