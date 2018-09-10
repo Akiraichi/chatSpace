@@ -1,4 +1,5 @@
 @import "./reset";
+@import "font-awesome";
 body,
 html {
     height: 100%;
@@ -51,8 +52,10 @@ html {
     display: inline-block;
 }
 
-.chatSide__user--new-group {
-    content: "\f044";
+.chatSide__user--edit-user {
+    color: #fff;
+    position: relative;
+    display: inline-block;
 }
 
 .chatSide__groups {
