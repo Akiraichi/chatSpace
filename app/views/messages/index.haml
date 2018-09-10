@@ -3,10 +3,15 @@
 %head
 %link(rel="stylesheet" type="text/css" href="application.scss")
 %body
+%div.notification
+  %div.notice 
+    チャットグループが作成されました
+
 %div.chatSide
   %div.chatSide__user
-    %div.chatSide__user--name
-      nakayama
+    %div.chatSide__user--content
+      %div.chatSide__user--name
+        nakayama
 
   %div.chatSide__groups
     %div.chatSide__group
@@ -19,3 +24,46 @@
         2サンプルグループ
       %div.chatSide__group--comment
         まだメッセージはありません
+%div.chatMain
+  %div.chatMain__header
+    %div.chatMain__header--group-name.clearfix
+      sampleグループ
+    %div.chatMain__header--edit-btn
+      %a(href="")
+        edit
+
+    %div.chatMain__header-members
+      MEMBER:akiaki
+  
+  %div.chatMain__body
+    %div.chatMain__body-message
+      %div.chatMain__body-message--name
+        kiaki
+      %div.chatMain__body-message--time
+      2016/04/14 06:27:28
+      %div.chatMain__body-message--text
+        なるほど
+    
+    %div.chatMain__body-message
+      %div.chatMain__body-message--name
+        akiaki
+      %div.chatMain__body-message--time
+        2016/04/14 06:27:28
+      %div.chatMain__body-message--text
+        2つ目のメッセージだよ
+    
+    %div.chatMain__body-message
+      %div.chatMain__body-message--name
+        nakayama
+      %div.chatMain__body-message--time
+        2016/04/14 06:27:28
+      %div.chatMain__body-message--text
+        3つ目のメッセージだよ
+  
+  %div.chatMain__footer
+    %form(id="newMessage" nctype="multipart/form-data" method="post")
+      %div.chatMain__footer-body
+        %input(id="messageBody" placeholder="type a message" name="messageBody" type="text")
+        %input(class="submit" name="commit" value="Send" type="submit")
+
+
