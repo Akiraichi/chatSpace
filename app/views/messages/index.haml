@@ -3,73 +3,73 @@
 %head
   %link(rel="stylesheet" type="text/css" href="application.scss")
 %body
-  %div.notification
-    %div.notice 
+  .notification
+    .notice 
       チャットグループが作成されました
 
-  %div.chatSide
-    %div.chatSide__user
-      %div.chatSide__user--content
-        %div.chatSide__user--name
+  .chatSide
+    .chatSide__user
+      .chatSide__user--content
+        .chatSide__user--name
           nakayama
         %a.chatSide__user--new-group(href="")
           %i.fa.fa-pencil-square-o
         %a.chatSide__user--edit-user(href="")
           %i.fa.fa-cog
 
-    %div.chatSide__groups
-      %div.chatSide__group-list
-        %div.chatSide__group
-          %div.chatSide__group--name
+    .chatSide__groups
+      .chatSide__group-list
+        .chatSide__group
+          .chatSide__group--name
             サンプルグループ
-          %div.chatSide__group--comment
+          .chatSide__group--comment
             おはようございます
-        %div.chatSide__group
-          %div.chatSide__group--name
+        .chatSide__group
+          .chatSide__group--name
             2サンプルグループ
-          %div.chatSide__group--comment
+          .chatSide__group--comment
             まだメッセージはありません
-  %div.chatMain
-    %div.chatMain__header
-      %div.chatMain__header--group.clearfix
-        %div.chatMain__header--group-name
+  .chatMain
+    .chatMain__header
+      .chatMain__header--group.clearfix
+        .chatMain__header--group-name
           sampleグループ
-        %div.chatMain__header--edit-btn
+        .chatMain__header--edit-btn
           %a(href="")
             edit
-      %div.chatMain__header-members
+      .chatMain__header-members
         MEMBER:akiaki
     
-    %div.chatMain__body
-      %div.chatMain__body-list
+    .chatMain__body
+      .chatMain__body-list
 
-        %div.chatMain__body-message
-          %div.chatMain__body-message--name
+        .chatMain__body-message
+          .chatMain__body-message--name
             kiaki
-          %div.chatMain__body-message--time
+          .chatMain__body-message--time
             2016/04/14 06:27:28
-          %div.chatMain__body-message--text
+          .chatMain__body-message--text
             なるほど
         
-        %div.chatMain__body-message
-          %div.chatMain__body-message--name
+        .chatMain__body-message
+          .chatMain__body-message--name
             akiaki
-          %div.chatMain__body-message--time
+          .chatMain__body-message--time
             2016/04/14 06:27:28
-          %div.chatMain__body-message--text
+          .chatMain__body-message--text
             2つ目のメッセージだよ
         
-        %div.chatMain__body-message.clearfix
-          %div.chatMain__body-message--name
+        .chatMain__body-message.clearfix
+          .chatMain__body-message--name
             nakayama
-          %div.chatMain__body-message--time
+          .chatMain__body-message--time
             2016/04/14 06:27:28
-          %div.chatMain__body-message--text
+          .chatMain__body-message--text
             3つ目のメッセージだよ
       
-    %div.chatMain__footer
+    .chatMain__footer
       %form(id="newMessage" nctype="multipart/form-data" method="post")
-        %div.chatMain__footer-body
+        .chatMain__footer-body
           %input(id="messageBody" placeholder="type a message" name="message[Body]" type="text")
         %input(class="submit" name="commit" value="Send" type="submit")
 

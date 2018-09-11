@@ -14,7 +14,7 @@ html {
 }
 
 .chatSide {
-    height: 100vh;
+    height: 100vh; //vhとしているが、％でも可
     width: 300px;
     float: left;
 }
@@ -27,34 +27,36 @@ html {
 }
 
 .chatSide__user--content {
-    height: 50px;
-    width: 100%;
-    line-height: 50px;
-    margin: auto 0;
+    height: 50px; //width: 100%; //親要素いっぱいまで広がるからなくてもいい？なくても上手くいくけど、なくてもいいよね
+    //line-height: 50px;
+    //line-heightとは行の高さを指定するもので、行間を指定する。例えばフォントサイズが16pxの文章にline-heightで20pxを指定した場合、2px分の行間が上下に配置されます。
+    //heightと同じ高さに指定することで上下中央揃えを狙っている？中のブロックの位置が上に来てしまうところを行間指定で中央に持って行っている
+    //つまりブロック内を中央に揃えている。
+    margin: auto 0; //marginで上下にautoで左右に0を指定することで上下中央揃えになっている。つまりこのブロック自体を上下中央揃えにしている。
     position: absolute;
     top: 0;
     bottom: 0;
 }
 
 .chatSide__user--name {
+    line-height: 50px;
     color: #fff;
     font-size: 20px;
     font-weight: bold;
-    margin: 0 20px;
-    position: relative;
-    display: inline-block;
+    margin: 0 20px; //position: relative; //なくてもいいと思う。
+    display: inline-block; //inlineにすることで並びやすくする。inline-blockは基本的には要素を横にずらっと並べたいときに使うと便利
 }
 
 .chatSide__user--new-group {
     color: #fff;
     margin-left: 90px;
-    position: relative;
+    //position: relative; //なくてもいいと思う
     display: inline-block;
 }
 
 .chatSide__user--edit-user {
     color: #fff;
-    position: relative;
+    //position: relative; //なくてもいいと思う
     display: inline-block;
 }
 
@@ -65,7 +67,7 @@ html {
 }
 
 .chatSide__group-list {
-    height: 100%;
+    height: 100%; //実際のグループリストより大きな範囲が指定されることに注意
     color: #fff;
 }
 
@@ -162,7 +164,7 @@ html {
 }
 
 .chatMain__footer-body {
-    position: relative;
+    //position: relative; //なくてもいいと思う
 }
 
 #messageBody {
