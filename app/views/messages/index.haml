@@ -71,6 +71,9 @@
       %form(id="newMessage" nctype="multipart/form-data" method="post")
         .chatMain__footer-body
           %input(id="messageBody" placeholder="type a message" name="message[Body]" type="text")
+          %label.upload-label{for: "upload-icon"}
+            %i.fa.fa-picture-o
+            %input(name="message[image]" id="upload-icon" type="file")
         %input(class="submit" name="commit" value="Send" type="submit")
 
 

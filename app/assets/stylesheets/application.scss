@@ -28,7 +28,8 @@ html {
 
 .chatSide__user--content {
     height: 50px; //width: 100%; //親要素いっぱいまで広がるからなくてもいい？なくても上手くいくけど、なくてもいいよね
-    //line-height: 50px;
+    line-height: 50px;
+    //user-name以外も中央に揃えるためにここで指定する
     //line-heightとは行の高さを指定するもので、行間を指定する。例えばフォントサイズが16pxの文章にline-heightで20pxを指定した場合、2px分の行間が上下に配置されます。
     //heightと同じ高さに指定することで上下中央揃えを狙っている？中のブロックの位置が上に来てしまうところを行間指定で中央に持って行っている
     //つまりブロック内を中央に揃えている。
@@ -39,7 +40,6 @@ html {
 }
 
 .chatSide__user--name {
-    line-height: 50px;
     color: #fff;
     font-size: 20px;
     font-weight: bold;
@@ -164,7 +164,7 @@ html {
 }
 
 .chatMain__footer-body {
-    //position: relative; //なくてもいいと思う
+    position: relative;
 }
 
 #messageBody {
@@ -173,6 +173,26 @@ html {
     padding-left: 10px;
     margin: 20px 0;
     border: none;
+}
+
+.upload-label{
+    height: 50px;
+    width: 40px;
+    margin: 32px 130px 20px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#upload-icon{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: none;
+}
+
+.fa{
+    //display: inline-block;//いらないと思われるが、問題が発生した場合コメント解除。
 }
 
 .submit {
