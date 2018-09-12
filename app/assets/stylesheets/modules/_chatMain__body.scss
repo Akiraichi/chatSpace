@@ -1,4 +1,5 @@
- .chatMain__body {
+$nameText: #434A54;
+.chatMain__body {
      height: calc(100vh - 15% - 90px);
      overflow-y: scroll;
 
@@ -13,7 +14,7 @@
              &--name {
                  font-size: 16px;
                  font-weight: bold;
-                 color: #434A54;
+                 color: $nameText;
                  float: left;
              }
 
@@ -25,7 +26,7 @@
              }
 
              &--text {
-                 color: #434A54;
+                 color: $nameText;
                  clear: both;
              }
          }
