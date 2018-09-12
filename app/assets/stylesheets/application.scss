@@ -1,3 +1,4 @@
+@import "./modules/siteColor";
 @import "reset";          
 @import "font-awesome";     //userconents内の鉛筆マークなどのためにimport
 @import "mixin/mixin"; //mixinファイルのimport
@@ -10,7 +11,6 @@
 @import "modules/chatMain__header"; //chatMainのheaderです
 @import "modules/chatMain__body"; //chatMainのbodyです
 @import "modules/chatMain__footer"; //chatMainのfooterです
-
 
 body,
 html {

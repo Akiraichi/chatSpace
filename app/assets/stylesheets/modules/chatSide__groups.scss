@@ -1,23 +1,22 @@
- @import "siteColor";
- .chatSide__groups {
-        height: 85%;
-        width: 100%;
-        background-color: $main-black-3;
+.chatSide__groups {
+    height: 85%;
+    width: 100%;
+    background-color: $main-black-3;
 
-        &--content {
-            height: 100%; //実際のグループリストより大きな範囲が指定されることに注意
-            color: white;
+    &--content {
+        height: 100%; //実際のグループリストより大きな範囲が指定されることに注意
+        color: white;
 
-            &--group {
-                padding: 20px;
+        &--group {
+            padding: 20px;
 
-                &--name {
-                    font-size: 15px;
-                }
+            &--name {
+                font-size: 15px;
+            }
 
-                &--comment {
-                    font-size: 11px;
-                }
+            &--comment {
+                font-size: 11px;
             }
         }
     }
+}
