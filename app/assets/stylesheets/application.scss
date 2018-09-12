@@ -1,6 +1,7 @@
-@import "./reset";
-@import "font-awesome";
-@import "mixin/mixin.scss";
+@import "reset";          
+@import "font-awesome";     //userconents内の鉛筆マークなどのためにimport
+@import "mixin/mixin"; //mixinファイルのimport
+
 
 body,
 html {
