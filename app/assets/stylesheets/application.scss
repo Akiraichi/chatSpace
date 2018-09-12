@@ -25,7 +25,8 @@ html {
         background-color: #090c10;
         position: relative;
         &--content {
-            height: 50px; //width: 100%; //親要素いっぱいまで広がるからなくてもいい？なくても上手くいくけど、なくてもいいよね
+            height: 50px; 
+            width: 100%;
             line-height: 50px;
             //user-name以外も中央に揃えるためにここで指定する
             //line-heightとは行の高さを指定するもので、行間を指定する。例えばフォントサイズが16pxの文章にline-heightで20pxを指定した場合、2px分の行間が上下に配置されます。
