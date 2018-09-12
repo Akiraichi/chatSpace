@@ -1,0 +1,51 @@
+ .chatMain__footer {
+     height: 90px;
+     width: 100%;
+     background-color: #B8C3C7;
+
+     &--newMessage {
+         margin: 0 40px;
+         position: relative;
+
+         &--body {
+             position: relative;
+
+             & #messageBody {
+                 height: 50px;
+                 width: calc(100% - 140px);
+                 padding-left: 10px;
+                 margin: 20px 0;
+                 border: none;
+             }
+
+             &--uploadLabel {
+                 height: 50px;
+                 width: 40px;
+                 margin: 32px 130px 20px 0;
+                 position: absolute;
+                 top: 0;
+                 right: 0;
+
+                 & #uploadIcon {
+                     position: absolute;
+                     top: 15px;
+                     left: 15px;
+                     display: none;
+                 }
+             }
+         }
+
+         &--submit {
+             color: #fff;
+             width: 100px;
+             height: 50px;
+             text-align: center;
+             background-color: #38AEF0;
+             margin: 20px 0;
+             position: absolute;
+             top: 0;
+             right: 0;
+             border: none;
+         }
+     }
+ }

@@ -1,0 +1,41 @@
+.chatSide__user {
+    height: 15%;
+    width: 100%;
+    background-color: #090c10;
+    position: relative;
+
+    &--content {
+        height: 50px;
+        width: 100%;
+        line-height: 50px;
+        //user-name以外も中央に揃えるためにここで指定する
+        //line-heightとは行の高さを指定するもので、行間を指定する。例えばフォントサイズが16pxの文章にline-heightで20pxを指定した場合、2px分の行間が上下に配置されます。
+        //heightと同じ高さに指定することで上下中央揃えを狙っている？中のブロックの位置が上に来てしまうところを行間指定で中央に持って行っている
+        //つまりブロック内を中央に揃えている。
+        margin: auto 0; //marginで上下にautoで左右に0を指定することで上下中央揃えになっている。つまりこのブロック自体を上下中央揃えにしている。
+        position: absolute;
+        top: 0;
+        bottom: 0;
+
+        &--name {
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0 20px; //position: relative; //なくてもいいと思う。
+            display: inline-block; //inlineにすることで並びやすくする。inline-blockは基本的には要素を横にずらっと並べたいときに使うと便利
+        }
+
+        &--newGroup {
+            color: #fff;
+            margin-left: 90px;
+            //position: relative; //なくてもいいと思う
+            display: inline-block;
+        }
+
+        &--editUser {
+            color: #fff;
+            //position: relative; //なくてもいいと思う
+            display: inline-block;
+        }
+    }
+}

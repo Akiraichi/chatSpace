@@ -1,0 +1,33 @@
+ .chatMain__body {
+     height: calc(100vh - 15% - 90px);
+     overflow-y: scroll;
+
+     &--list {
+         padding-top: 26px;
+         padding-left: 40px;
+
+         &--message {
+             @include clearfix();
+             padding: 20px 0;
+
+             &--name {
+                 font-size: 16px;
+                 font-weight: bold;
+                 color: #434A54;
+                 float: left;
+             }
+
+             &--time {
+                 font-size: 12px;
+                 color: #999;
+                 float: left;
+                 padding: 0 10px 10px;
+             }
+
+             &--text {
+                 color: #434A54;
+                 clear: both;
+             }
+         }
+     }
+ }

@@ -2,6 +2,13 @@
 @import "font-awesome";     //userconents内の鉛筆マークなどのためにimport
 @import "mixin/mixin"; //mixinファイルのimport
 
+@import "modules/chatSide__user"; //chatSideのuserのCSSファイルです
+@import "modules/chatSide__groups"; //chatSideのgroupsのCSSファイルです
+
+@import "modules/chatMain__header"; //chatMainのheaderです
+@import "modules/chatMain__body"; //chatMainのbodyです
+@import "modules/chatMain__footer"; //chatMainのfooterです
+
 
 body,
 html {
@@ -15,167 +22,18 @@ html {
     text-align: center;
     color: #fff;
 }
+
 .chatSide {
     height: 100vh; //vhとしているが、％でも可
     width: 300px;
     float: left;
-    &__user {
-        height: 15%;
-        width: 100%;
-        background-color: #090c10;
-        position: relative;
-        &--content {
-            height: 50px; 
-            width: 100%;
-            line-height: 50px;
-            //user-name以外も中央に揃えるためにここで指定する
-            //line-heightとは行の高さを指定するもので、行間を指定する。例えばフォントサイズが16pxの文章にline-heightで20pxを指定した場合、2px分の行間が上下に配置されます。
-            //heightと同じ高さに指定することで上下中央揃えを狙っている？中のブロックの位置が上に来てしまうところを行間指定で中央に持って行っている
-            //つまりブロック内を中央に揃えている。
-            margin: auto 0; //marginで上下にautoで左右に0を指定することで上下中央揃えになっている。つまりこのブロック自体を上下中央揃えにしている。
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            &--name {
-                color: #fff;
-                font-size: 20px;
-                font-weight: bold;
-                margin: 0 20px; //position: relative; //なくてもいいと思う。
-                display: inline-block; //inlineにすることで並びやすくする。inline-blockは基本的には要素を横にずらっと並べたいときに使うと便利
-            } 
-            &--newGroup {
-                color: #fff;
-                margin-left: 90px;
-                //position: relative; //なくてもいいと思う
-                display: inline-block;
-            }
-            &--editUser {
-                color: #fff;
-                //position: relative; //なくてもいいと思う
-                display: inline-block;
-            }
-        }
-    }
-    &__groups {
-        height: 85%;
-        width: 100%;
-        background-color: #253141;
-        &--content {
-            height: 100%; //実際のグループリストより大きな範囲が指定されることに注意
-            color: #fff;
-            &--group {
-                padding: 20px;
-                &--name {
-                    font-size: 15px;
-                }
-                &--comment {
-                    font-size: 11px;
-                }
-            }
-        }
-    }
 }
+
 .chatMain {
     height: 100vh;
     width: calc(100vw - 300px);
     float: left;
-    &__header {
-        height: 15%;
-        border: 1px solid #eee;
-        &--group {
-            @include clearfix();
-            margin: 0 40px;
-            &--name {
-                color: #333;
-                font-size: 20px;
-                margin: 35px 0 15px;
-                float: left;
-            }
-            &--editButton {
-                font-size: 15px;
-                padding: 12.5px 20px;
-                margin: 28px 20px 0;
-                border: 1px solid #38AEF0;
-                float: right;
-            }
-        }
-        &--members {
-            color: #999;
-            font-size: 12px;
-            margin: 0 40px;
-        }
-    }
-    &__body {
-        height: calc( 100vh - 15% - 90px);
-        overflow-y: scroll;
-        &--list {
-            padding-top: 26px;
-            padding-left: 40px;
-            &--message {
-                @include clearfix();
-                padding: 20px 0;
-                &--name {
-                    font-size: 16px;
-                    font-weight: bold;
-                    color: #434A54;
-                    float: left;
-                }  
-                &--time {
-                    font-size: 12px;
-                    color: #999;
-                    float: left;
-                    padding: 0 10px 10px;
-                }
-                &--text {
-                    color: #434A54;
-                    clear: both;
-                }
-            }
-        }
-    }
-    &__footer {
-        height: 90px;
-        width: 100%;
-        background-color: #B8C3C7;
-        &--newMessage {
-            margin: 0 40px;
-            position: relative;
-            &--body {
-                position: relative;
-                & #messageBody {
-                    height: 50px;
-                    width: calc( 100% - 140px);
-                    padding-left: 10px;
-                    margin: 20px 0;
-                    border: none;
-                }
-                &--uploadLabel{
-                    height: 50px;
-                    width: 40px;
-                    margin: 32px 130px 20px 0;
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    & #uploadIcon{
-                        position: absolute;
-                        top: 15px;
-                        left: 15px;
-                        display: none;
-                    }
-                }
-            }
-            &--submit {
-                color: #fff;
-                width: 100px;
-                height: 50px;
-                text-align: center;
-                background-color: #38AEF0;
-                margin: 20px 0;
-                position: absolute;
-                top: 0;
-                right: 0;
-                border: none;
-            }
-        }
-    }
 }
+
+   
+   
