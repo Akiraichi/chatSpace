@@ -1,7 +1,7 @@
 .chatSide__user {
     height: 15%;
     width: 100%;
-    background-color: #090c10;
+    background-color: $main-black-2;
     position: relative;
 
     &--content {
@@ -18,7 +18,7 @@
         bottom: 0;
 
         &--name {
-            color: #fff;
+            color: white;
             font-size: 20px;
             font-weight: bold;
             margin: 0 20px; //position: relative; //なくてもいいと思う。
@@ -26,14 +26,14 @@
         }
 
         &--newGroup {
-            color: #fff;
+            color: white;
             margin-left: 90px;
             //position: relative; //なくてもいいと思う
             display: inline-block;
         }
 
         &--editUser {
-            color: #fff;
+            color: white;
             //position: relative; //なくてもいいと思う
             display: inline-block;
         }

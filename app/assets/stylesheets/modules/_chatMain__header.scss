@@ -1,13 +1,13 @@
- .chatMain__header {
+.chatMain__header {
      height: 15%;
-     border: 1px solid #eee;
+     border: 1px solid $white-1;
 
      &--group {
          @include clearfix();
          margin: 0 40px;
 
          &--name {
-             color: #333;
+             color: $black-3;
              font-size: 20px;
              margin: 35px 0 15px;
              float: left;
@@ -17,13 +17,13 @@
              font-size: 15px;
              padding: 12.5px 20px;
              margin: 28px 20px 0;
-             border: 1px solid #38AEF0;
+             border: 1px solid $accent-blue-white;
              float: right;
          }
      }
 
      &--members {
-         color: #999;
+         color: $black-2;
          font-size: 12px;
          margin: 0 40px;
      }
