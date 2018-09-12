@@ -1,5 +1,7 @@
 @import "./reset";
 @import "font-awesome";
+@import "mixin/mixin.scss";
+
 body,
 html {
     height: 100%;
@@ -95,6 +97,7 @@ html {
 }
 
 .chatMain__header--group {
+    @include clearfix();
     margin: 0 40px;
 }
 
@@ -130,6 +133,7 @@ html {
 }
 
 .chatMain__body-message {
+    @include clearfix();
     padding: 20px 0;
 }
 
@@ -206,10 +210,4 @@ html {
     top: 0;
     right: 0;
     border: none;
-}
-
-.clearfix::after {
-    content: "";
-    display: block;
-    clear: both;
 }
