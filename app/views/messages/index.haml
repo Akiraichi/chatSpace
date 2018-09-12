@@ -3,79 +3,14 @@
 %head
   %link(rel="stylesheet" type="text/css" href="application.scss")
 %body
-  .notification
-    .notice 
-      チャットグループが作成されました
+  =render './notification.haml'
 
   .chatSide
-    .chatSide__user
-      .chatSide__user--content
-        .chatSide__user--content--name
-          akiakia
-        %a.chatSide__user--content--newGroup(href="")
-          %i.fa.fa-pencil-square-o
-        %a.chatSide__user--conetnt--editUser(href="")
-          %i.fa.fa-cog
-
-    .chatSide__groups
-      .chatSide__groups--content
-        .chatSide__groups--content--group
-          .chatSide__groups--content--group--name
-            1サンプルグループ
-          .chatSide__groups--content--group--comment
-            おはようございます
-
-        .chatSide__groups--content--group
-          .chatSide__groups--content--group--name
-            2サンプルグループ
-          .chatSide__groups--content--group--comment
-            こんにちは
-
+    =render './chatSide__user'
+    =render './chatSide__groups' 
 
   .chatMain
-    .chatMain__header
-      .chatMain__header--group
-        .chatMain__header--group--name
-          sampleグループ
-        .chatMain__header--group--editButton
-          %a(href="")
-            edit
-      .chatMain__header--members
-        MEMBER:akiaki
-    
-    .chatMain__body
-      .chatMain__body--list
-        .chatMain__body--list--message
-          .chatMain__body--list--message--name
-            kiaki
-          .chatMain__body--list--message--time
-            2016/04/14 06:27:28
-          .chatMain__body--list--message--text
-            なるほど
-        
-        .chatMain__body--list--message
-          .chatMain__body--list--message--name
-            tosiya
-          .chatMain__body--list--message--time
-            2016/04/14 06:27:28
-          .chatMain__body--list--message--text
-            2つ目のメッセージだよ
-
-        .chatMain__body--list--message
-          .chatMain__body--list--message--name
-            akira
-          .chatMain__body--list--message--time
-            2016/04/14 06:27:28
-          .chatMain__body--list--message--text
-            3つ目のメッセージだよ
-      
-    .chatMain__footer
-      %form(class="chatMain__footer--newMessage" nctype="multipart/form-data" method="post")
-        .chatMain__footer--newMessage--body
-          %input(id="messageBody" placeholder="type a message" name="message[Body]" type="text")
-          %label.chatMain__footer--newMessage--body--uploadLabel{for: "uploadIcon"}
-            %i.fa.fa-picture-o
-            %input(name="message[image]" id="uploadIcon" type="file")
-        %input(class="chatMain__footer--newMessage--submit" name="commit" value="Send" type="submit")
-
+    =render './chatMain__header'
+    =render './chatMain__body'
+    =render './chatMain__footer'
 

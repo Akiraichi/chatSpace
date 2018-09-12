@@ -1,0 +1,8 @@
+.chatMain__footer
+  %form(class="chatMain__footer--newMessage" nctype="multipart/form-data" method="post")
+    .chatMain__footer--newMessage--body
+      %input(id="messageBody" placeholder="type a message" name="message[Body]" type="text")
+      %label.chatMain__footer--newMessage--body--uploadLabel{for: "uploadIcon"}
+        %i.fa.fa-picture-o
+        %input(name="message[image]" id="uploadIcon" type="file")
+    %input(class="chatMain__footer--newMessage--submit" name="commit" value="Send" type="submit")
