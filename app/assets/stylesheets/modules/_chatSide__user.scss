@@ -1,7 +1,8 @@
+@import "siteColor";
 .chatSide__user {
     height: 15%;
     width: 100%;
-    background-color: #090c10;
+    background-color: $main-black-2;
     position: relative;
 
     &--content {
