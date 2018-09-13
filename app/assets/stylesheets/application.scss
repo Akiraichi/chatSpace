@@ -2,16 +2,12 @@
 @import "reset";          
 @import "font-awesome";     //userconents内の鉛筆マークなどのためにimport
 @import "mixin/mixin"; //mixinファイルのimport
-
 @import "modules/user"; //devise用のcssファイルです
-
 @import "modules/notification"; //noticicationのcssファイルです
-
 @import "modules/user"; //userのcssです
-
+@import "modules/group";
 @import "modules/chatSide__user"; //chatSideのuserのCSSファイルです
 @import "modules/chatSide__groups"; //chatSideのgroupsのCSSファイルです
-
 @import "modules/chatMain__header"; //chatMainのheaderです
 @import "modules/chatMain__body"; //chatMainのbodyです
 @import "modules/chatMain__footer"; //chatMainのfooterです
