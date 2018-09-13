@@ -1,8 +1,8 @@
 .chatSide__groups
   .chatSide__groups--content
     - current_user.groups.each do |group|
-      = link_to group_messages_path(group) do
-        .chatSide__groups--content--group
+      .chatSide__groups--content--group
+        = link_to group_messages_path(group) do
           .chatSide__groups--content--group--name
             = group.name
           .chatSide__groups--content--group--comment
