@@ -1,8 +1,8 @@
 .chatSide__user
   .chatSide__user--content
     .chatSide__user--content--name
-      akiakia
-    %a.chatSide__user--content--newGroup(href="")
-      %i.fa.fa-pencil-square-o
-    %a.chatSide__user--conetnt--editUser(href="")
-      %i.fa.fa-cog
+      = current_user.name
+    = link_to "", class:"chatSide__user--content--newGroup" do  
+      = fa_icon 'pencil-square-o', class: 'fa-pencil-square-o'
+    = link_to edit_user_path(current_user), class:"chatSide__user--conetnt--editUser" do 
+      = fa_icon 'cog', class: 'fa-cog'
