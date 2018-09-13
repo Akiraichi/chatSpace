@@ -3,6 +3,8 @@
 @import "font-awesome";     //userconents内の鉛筆マークなどのためにimport
 @import "mixin/mixin"; //mixinファイルのimport
 
+@import "modules/user"; //devise用のcssファイルです
+
 @import "modules/notification"; //noticicationのcssファイルです
 
 @import "modules/chatSide__user"; //chatSideのuserのCSSファイルです
