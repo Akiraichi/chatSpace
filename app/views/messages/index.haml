@@ -12,6 +12,8 @@
 
   .chatMain
     =render './chatMain__header'
-    =render './chatMain__body'
+    .chatMain__body
+      .chatMain__body--list
+        =render @messages
     =render './chatMain__footer'
 

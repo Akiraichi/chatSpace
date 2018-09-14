@@ -1,6 +1,4 @@
 ja:
-  name: "名前"
-  email: "メールアドレス"
   activerecord:
     errors:
       messages:
@@ -110,6 +108,7 @@ ja:
   errors:
     format: "%{attribute}%{message}"
     messages:
+      Name: グループ名
       accepted: を受諾してください
       blank: を入力してください
       present: は入力しないでください
