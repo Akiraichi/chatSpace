@@ -44,6 +44,8 @@ group :test do
   gem "faker"
   gem 'rspec-rails'
   gem 'factory_girl_rails', "~> 4.4.1"
+  gem 'rails-controller-testing'
+  gem 'capybara'
 end
 
 group :development do
