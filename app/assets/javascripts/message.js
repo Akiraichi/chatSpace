@@ -7,10 +7,11 @@ $(function () {
                   <div class='chatMain__body--list--message--time'>
                   ${message.created_at}</div>
                   <div class='chatMain__body--list--message--text'>`;
-    debugger;
     if (message.content_present) {
       html += `<p>${message.content}</p>`;
-      debugger;
+    }
+    if (message.image_present) {
+      html += `<img src="${message.image_url}">`
     }
     html += `</div></div>`;
                   
