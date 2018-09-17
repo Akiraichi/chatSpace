@@ -54,5 +54,8 @@ $(function () {
       .fail(function () {
         alert('error');
       })
+      .always(function () {
+        $(".chatMain__footer--newMessage--submit").removeAttr("disabled");
+      });
   });
 });
