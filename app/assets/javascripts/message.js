@@ -14,16 +14,16 @@ $(function () {
       html += `<img src="${message.image_url}">`
     }
     html += `</div></div>`;
-                  
-                  // <p>${message.content}</p>
-                  // </div>
-                  // </div>
 
-                //    <% if ${message.content_present}? %>
-                //       <p>${message.content}</p>
-                //    <%= image_tag ${message.image_url}  if ${message.image_present}? %>
-                //   </div>
-                // </div>`
+    // <p>${message.content}</p>
+    // </div>
+    // </div>
+
+    //    <% if ${message.content_present}? %>
+    //       <p>${message.content}</p>
+    //    <%= image_tag ${message.image_url}  if ${message.image_present}? %>
+    //   </div>
+    // </div>`
     return html;
   };
 
@@ -47,17 +47,20 @@ $(function () {
     var url = $(this).attr('action'); //action属性にリンク先のURLがあるため
     var href = window.location.href;
     $.ajax({
-      url: href,
-      type: "POST",
-      data: formData,
-      dataType: 'json',
-      processData: false,
-      contentType: false
-    })
+        url: href,
+        type: "POST",
+        data: formData,
+        dataType: 'json',
+        processData: false,
+        contentType: false
+      })
       .done(function (message) {
         var html = buildHTML(message);
         $('.chatMain__body--list').append(html)
         $('#messageBody').val('')
+        $('.chatMain__body').animate({
+          scrollTop: $('.chatMain__body')[0].scrollHeight
+        }, 1000, 'swing');
       })
       .fail(function () {
         alert('error');
