@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
   def index
+    @group = Group.where('name LIKE(?)', "%#{params[:name]}%").limit(20)
+    respond_to do |format|
+     format.html
+     format.json
+   end
   end
   def edit
   end
@@ -14,6 +19,8 @@ class UsersController < ApplicationController
 
   private
 
+  def group_params
+    params.require(:group).permit(:name, { :user_ids => [] })
   def user_params
     params.require(:user).permit(:name, :email)
   end
