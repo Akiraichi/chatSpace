@@ -1,5 +1,6 @@
 $(function () {
   $(".chat-group-form__input").on("keyup", function () {
-    var input = $(".search__query").val();
+    var input = $("#user-search-field").val();
+    console.log(input);
   });
 });

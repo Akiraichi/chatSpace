@@ -4,8 +4,8 @@ class UsersController < ApplicationController
     respond_to do |format|
      format.html
      format.json
+    end
    end
-  end
   def edit
   end
 
@@ -21,6 +21,7 @@ class UsersController < ApplicationController
 
   def group_params
     params.require(:group).permit(:name, { :user_ids => [] })
+  end
   def user_params
     params.require(:user).permit(:name, :email)
   end
