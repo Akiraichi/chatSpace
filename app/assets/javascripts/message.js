@@ -2,10 +2,11 @@ $(function () {
   function buildHTML(message) {
     var html = `<div class='chatMain__body--list--message'>
                   <div class='chatMain__body--list--message--name'>
-                  ${message.user_name}
+                    ${message.user_name}
                   </div>
                   <div class='chatMain__body--list--message--time'>
-                  ${message.created_at}</div>
+                    ${message.created_at}
+                  </div>
                   <div class='chatMain__body--list--message--text'>`;
     if (message.content_present) {
       html += `<p>${message.content}</p>`;
