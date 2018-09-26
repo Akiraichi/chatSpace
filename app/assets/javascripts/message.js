@@ -14,34 +14,10 @@ $(function () {
       html += `<img src="${message.image_url}">`
     }
     html += `</div></div>`;
-
-    // <p>${message.content}</p>
-    // </div>
-    // </div>
-
-    //    <% if ${message.content_present}? %>
-    //       <p>${message.content}</p>
-    //    <%= image_tag ${message.image_url}  if ${message.image_present}? %>
-    //   </div>
-    // </div>`
     return html;
   };
 
-  //   var html = `.chatMain__body--list--message
-  //                 .chatMain__body--list--message--name
-  //                   = ${message.user_name}
-  //                 .chatMain__body--list--message--time
-  //                   = format_posted_time(${message.created_at})
-  //                 .chatMain__body--list--message--text
-  //                   - if ${message.content_present}?
-  //                     %p
-  //                       = ${message.content}
-  //                   = image_tag ${message.image_url}  if ${message.image_present}?`
-
-  //   return html;
-  // }
-
-  $('.chatMain__footer--newMessage').submit(function (e) {
+  $('#chatMain__footer--newMessage').submit(function (e) {
     e.preventDefault();
     var formData = new FormData(this); //フォームに入力された値をまとめて取得
     var url = $(this).attr('action'); //action属性にリンク先のURLがあるため
