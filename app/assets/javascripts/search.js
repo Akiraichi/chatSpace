@@ -9,5 +9,12 @@ $(function () {
       },
       dataType: 'json'
     })
+    .done(function (message) {
+        var html = buildHTML(message);
+      })
+      .fail(function () {
+        alert('error');
+      })
+
   });
 });
