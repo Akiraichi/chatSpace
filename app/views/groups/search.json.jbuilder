@@ -1,3 +1,4 @@
 json.array! @groups do |group|
-  json.id group.name
+  json.name group.name
+  json.id group.id
 end
