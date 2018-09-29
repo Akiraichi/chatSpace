@@ -1,5 +1,5 @@
 $(function () {
-  var member_list = $("#chat-group-users");
+  var member_list = $("#user-search-result");
   function appendMenber(user) {
     var html = `<div class="chat-group-user clearfix">
                   <p class="chat-group-user__name">${user.name}</p>
@@ -10,6 +10,7 @@ $(function () {
 
   $(document).click("user-search-add chat-group-user__btn chat-group-user__btn--add", function () {
     $(this).remove();
+
   })
   
   $(".chat-group-form__input").on("keyup", function () {
