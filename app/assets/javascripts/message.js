@@ -1,5 +1,11 @@
 $(function () {
   function buildHTML(message) {
+
+    var image_html = "";
+    if (message.image_present) {
+      image_html = `  <img src="${message.image_url}">`;
+    }
+    
     var html = `<div class='chatMain__body--list--message'>
                   <div class='chatMain__body--list--message--name'>
                     ${message.user_name}
@@ -7,14 +13,9 @@ $(function () {
                   <div class='chatMain__body--list--message--time'>
                     ${message.created_at}
                   </div>
-                  <div class='chatMain__body--list--message--text'>`;
-    if (message.content_present) {
-      html += `<p>${message.content}</p>`;
-    }
-    if (message.image_present) {
-      html += `<img src="${message.image_url}">`
-    }
-    html += `</div></div>`;
+                  <div class='chatMain__body--list--message--text'>
+                    <p>${message.content}</p>
+                    ${image_html}</div></div>`;
     return html;
   };
 
