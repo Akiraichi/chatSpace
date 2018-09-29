@@ -8,6 +8,10 @@ $(function () {
     member_list.append(html);
 }
 
+  $(document).click("user-search-add chat-group-user__btn chat-group-user__btn--add", function () {
+    $(this).remove();
+  })
+  
   $(".chat-group-form__input").on("keyup", function () {
     var input = $("#user-search-field").val();
     debugger;
