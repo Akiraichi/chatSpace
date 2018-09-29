@@ -10,7 +10,10 @@ class MessagesController < ApplicationController
     @message = @group.messages.new(message_params)
     #保存に成功した場合と失敗した場合とで処理を分ける
     if @message.save
-      redirect_to group_messages_path(@group), notice: 'メッセージが送信されました'
+      respond_to do |format|
+        format.html { redirect_to group_messages_path(@group), notice: 'メッセージが送信されました'  }
+        format.json  #リクエストされたformatによって処理が分かれる
+      end
     else
       @messages = @group.messages.includes(:user)
       flash.now[:alert] = 'メッセージを入力してください。'

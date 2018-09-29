@@ -8,10 +8,10 @@
 -#     %input(class="chatMain__footer--newMessage--submit" name="commit" value="Send" type="submit")
 
 .chatMain__footer
-  = form_for [@group, @message], :html => {:class => "chatMain__footer--newMessage"} do |f|  #messagesはgroupsにネストされているため
+  = form_for [@group, @message], :html => {:class => "chatMain__footer--newMessage", :id => "newMessage"} do |f|  #messagesはgroupsにネストされているため
     .chatMain__footer--newMessage--body
       = f.text_field :content, id: 'messageBody', placeholder: 'type a message'
       = f.label :uploadIcon, class: 'chatMain__footer--newMessage--body--uploadLabel' do
         = fa_icon 'picture-o', class: 'fa-picture-o'
         = f.file_field :image, id: 'message_uploadIcon'
-    = f.submit 'Send', class: 'chatMain__footer--newMessage--submit'
+    = f.submit 'Sent', class: 'chatMain__footer--newMessage--submit'
