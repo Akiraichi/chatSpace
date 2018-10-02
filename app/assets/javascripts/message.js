@@ -6,7 +6,7 @@ $(function () {
       image_html = `<img src="${message.image_url}">`;
     }
 
-    var html = `<div class='chatMain__body--list--message'>
+    var html = `<div class='chatMain__body--list--message "data-message-id": "${message.id}"'>
                   <div class='chatMain__body--list--message--name'>
                     ${message.user_name}
                   </div>
