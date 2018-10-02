@@ -4,6 +4,10 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @messages = @group.messages.includes(:user) #n+1問題を阻止するため
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def create
