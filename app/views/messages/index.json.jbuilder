@@ -6,3 +6,4 @@ json.messages @messages.each do |message|
   json.image_present message.image.present?
   json.created_at message.created_at
   json.id message.id
+end
