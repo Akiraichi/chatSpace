@@ -6,7 +6,9 @@ class MessagesController < ApplicationController
     @messages = @group.messages.includes(:user) #n+1問題を阻止するため
     respond_to do |format|
       format.html
-      format.json
+      format.json { 
+        binding.pry
+        @new_messages = Message.where('id > ?', params[:message][:id])}
     end
   end
 
@@ -31,6 +33,11 @@ class MessagesController < ApplicationController
   def message_params
     params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
   end
+
+  def where_params
+    params.permit(:message, :id)
+  end
+
   def set_group
     @group = Group.find(params[:group_id])
   end
