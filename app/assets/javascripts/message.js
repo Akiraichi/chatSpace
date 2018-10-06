@@ -37,6 +37,7 @@ $(function () {
       .done(function (message) {
         var html = buildHTML(message);
         $('.chatMain__body--list').append(html)
+        
         $('#messageBody').val('')
         $('.chatMain__body').animate({
           scrollTop: $('.chatMain__body')[0].scrollHeight

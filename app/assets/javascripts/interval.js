@@ -20,26 +20,21 @@ var interval = setInterval(function () {
                   </div>`;
       return html;
     };
+    var message_id = 0;
     if ($('.chatMain__body--list--message')[0]){
-      var message_id = $('.chatMain__body--list--message').last().data('message-id');
-    } else {
-      var message_id = 0;
+      message_id = $('.chatMain__body--list--message').last().data('message-id');
     }
     $.ajax({
-      url: window.location.href,
+      url: location.href,
       type: 'GET',
-      data: { 
-        id: message_id 
-      },
+      data: (`id=${message_id}`),
       dataType: 'json',
-      processData: false,
-      contentType: false
+      processData: false
     })
       .done(function (data) {
-        debugger;
         $.each(data, function (i, data) { //'data'を'data'に代入してeachで回す
           debugger;
-          var html = buildHTML(data.message);
+          var html = buildHTML(data);
           $('.chatMain__body--list').append(html);
         });
         // data.messages.forEach(function (message) {
@@ -51,7 +46,7 @@ var interval = setInterval(function () {
         }, 1000, 'swing');
       })
       .fail(function (data) {
-        //alert('自動更新に失敗しました');
+        alert('自動更新に失敗しました');
       });
   } else {
     clearInterval(interval);
