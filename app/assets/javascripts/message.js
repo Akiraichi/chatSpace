@@ -2,8 +2,8 @@ $(function () {
   function buildHTML(message) {
 
     var image_html = "";
-    if (message.image_present) {
-      image_html = `<img src="${message.image_url}">`;
+    if (message.image["url"]) {
+      image_html = `<img src="${message.image.url}">`;
     }
 
     var html = `<div class='chatMain__body--list--message' data-message-id = "${message.id}">
