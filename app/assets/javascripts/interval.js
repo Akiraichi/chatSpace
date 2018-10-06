@@ -33,14 +33,9 @@ var interval = setInterval(function () {
     })
       .done(function (data) {
         $.each(data, function (i, data) { //'data'を'data'に代入してeachで回す
-          debugger;
           var html = buildHTML(data);
           $('.chatMain__body--list').append(html);
         });
-        // data.messages.forEach(function (message) {
-        //   var html = buildHTML(message);
-        //   $('.chatMain__body--list').append(html);
-        // });
         $('.chatMain__body').animate({
           scrollTop: $('.chatMain__body')[0].scrollHeight
         }, 1000, 'swing');
