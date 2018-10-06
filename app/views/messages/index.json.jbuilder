@@ -1,5 +1,5 @@
 if @new_messages.present?
-  json.messages @new_messages.each do |message|
+  json.array!  @new_messages.each do |message|
   json.user_name  message.user.name
   json.content message.content
   json.image_url message.image.url
