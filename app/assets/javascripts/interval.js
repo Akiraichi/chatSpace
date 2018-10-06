@@ -3,7 +3,6 @@ var interval = setInterval(function () {
     
     function buildHTML(message) {
       var image_html = "";
-      debugger;
       if (message.image["url"]) {
         image_html = `<img src="${message.image.url}">`;
       }
