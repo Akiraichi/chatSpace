@@ -1,6 +1,4 @@
 json.user_name  @message.user.name
 json.content @message.content
-json.image_url @message.image.url
-json.content_present @message.content.present?
-json.image_present @message.image.present?
+json.image @message.image
 json.created_at @message.created_at
