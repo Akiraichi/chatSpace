@@ -7,8 +7,10 @@ class MessagesController < ApplicationController
     respond_to do |format|
       format.html
       format.json { 
-        binding.pry
-        @new_messages = Message.where('id > ?', params[:message][:id])}
+        if params[:id] != 'undefined'
+          @new_messages = Message.where('id > ? and group_id = ?', params[:id],params[:group_id])
+        end
+      }
     end
   end
 
@@ -35,7 +37,7 @@ class MessagesController < ApplicationController
   end
 
   def where_params
-    params.permit(:message, :id)
+    params.permit(:id)
   end
 
   def set_group
