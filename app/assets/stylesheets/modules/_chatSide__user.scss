@@ -21,20 +21,21 @@
             color: white;
             font-size: 20px;
             font-weight: bold;
-            margin: 0 20px; //position: relative; //なくてもいいと思う。
+            margin: 0 20px; 
+            position: relative; //なくてもいいと思う。
             display: inline-block; //inlineにすることで並びやすくする。inline-blockは基本的には要素を横にずらっと並べたいときに使うと便利
         }
 
         &--newGroup {
             color: white;
             margin-left: 90px;
-            //position: relative; //なくてもいいと思う
+            position: relative; //なくてもいいと思う
             display: inline-block;
         }
 
         &--editUser {
             color: white;
-            //position: relative; //なくてもいいと思う
+            position: relative; //なくてもいいと思う
             display: inline-block;
         }
     }
