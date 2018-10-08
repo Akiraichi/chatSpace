@@ -13,6 +13,5 @@ require 'capistrano3/unicorn'
 
 require "capistrano/scm/git"
 
-set :assets_roles, [:web, :app]
 install_plugin Capistrano::SCM::Git
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
