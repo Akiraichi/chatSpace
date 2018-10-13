@@ -43,6 +43,7 @@ GEM
     airbrussh (1.3.0)
       sshkit (>= 1.6.1, != 1.7.0)
     arel (7.1.4)
+    ast (2.4.0)
     bcrypt (3.1.12)
     bindex (0.5.0)
     builder (3.2.3)
@@ -93,6 +94,7 @@ GEM
     diff-lcs (1.3)
     erb2haml (0.1.5)
       html2haml
+    erubi (1.7.1)
     erubis (2.7.0)
     excon (0.62.0)
     execjs (2.7.0)
@@ -134,6 +136,7 @@ GEM
       haml (>= 4.0.6, < 6.0)
       html2haml (>= 1.0.1)
       railties (>= 4.0.1)
+    highline (2.0.0)
     html2haml (2.2.0)
       erubis (~> 2.7.0)
       haml (>= 4.0, < 6)
@@ -141,6 +144,15 @@ GEM
       ruby_parser (~> 3.5)
     i18n (1.1.0)
       concurrent-ruby (~> 1.0)
+    i18n-tasks (0.9.25)
+      activesupport (>= 4.0.2)
+      ast (>= 2.1.0)
+      erubi
+      highline (>= 2.0.0)
+      i18n
+      parser (>= 2.2.3.0)
+      rainbow (>= 2.2.2, < 4.0)
+      terminal-table (>= 1.5.1)
     ipaddress (0.8.3)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
@@ -175,6 +187,8 @@ GEM
     nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
+    parser (2.5.1.2)
+      ast (~> 2.4.0)
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -219,6 +233,7 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
+    rainbow (3.0.0)
     raindrops (0.19.0)
     rake (12.3.1)
     rb-fsevent (0.10.3)
@@ -274,6 +289,8 @@ GEM
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
     temple (0.8.0)
+    terminal-table (1.8.0)
+      unicode-display_width (~> 1.1, >= 1.1.1)
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
@@ -281,6 +298,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.19)
       execjs (>= 0.3.0, < 3)
+    unicode-display_width (1.4.0)
     unicorn (5.4.1)
       kgio (~> 2.6)
       raindrops (~> 0.7)
@@ -318,6 +336,7 @@ DEPENDENCIES
   fog-aws
   font-awesome-rails
   haml-rails
+  i18n-tasks
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
