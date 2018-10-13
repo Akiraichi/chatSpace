@@ -26,6 +26,7 @@ $(function () {
     var formData = new FormData(this); //フォームに入力された値をまとめて取得
     var url = $(this).attr('action'); //action属性にリンク先のURLがあるため
     var href = window.location.href;
+
     $.ajax({
         url: href,
         type: "POST",
@@ -35,6 +36,9 @@ $(function () {
         contentType: false
       })
       .done(function (message) {
+        
+        
+
         var html = buildHTML(message);
         $('.chatMain__body--list').append(html)
         
